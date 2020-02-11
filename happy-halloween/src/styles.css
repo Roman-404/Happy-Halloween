@@ -1,0 +1,133 @@
+:root {
+    --width: 800px;
+}
+
+body, html {
+    height: 100%;
+    margin: 0;
+}
+
+.side-bg {
+    background-image: url('./graphics/side-bg.jpg');
+    height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+}
+
+.background-screen {
+    background-image: url('./graphics/background-screen.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 1090px;
+    height: 100vh;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.background {
+    background-image: url('./graphics/background.png');
+    background-repeat: no-repeat;
+    background-position: center top 40%;
+    background-size: var(--width);
+    width: 100vh;
+    height: 100vh;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.page-info {
+    top: 15px;
+    width: var(--width);
+    position: absolute;
+    overflow: auto;
+    margin: auto;
+    left: 0; right: 0;
+}
+
+.timer {
+    color: cornsilk;
+    top: 15%;
+    width: var(--width);
+    position: absolute;
+    overflow: auto;
+    margin: auto;
+    left: 0; right: 0;
+    font-size: 40px;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+
+.react-loading {
+    height: 15vmin;
+    pointer-events: none;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 35%;
+}
+
+.tasks {
+    position: absolute;
+    left: 0; right: 0;
+    margin-top: 10%;
+}
+
+.task {
+    margin-top: 5%;
+}
+
+.font {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+}
+  
+@media (prefers-reduced-motion: no-preference) {
+    .react-loading {
+      animation: react-loading-spin infinite 1s linear;
+    }
+}
+
+@keyframes react-loading-spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+}
+
+.progress {
+	background-color: #4c4d48;
+	border-radius: 20px;
+	position: absolute;
+    margin: 15px 0;
+    margin-left: 40%;
+	height: 20px;
+    width: 400px;
+    border: solid 3px #ebecbc;
+}
+
+.progress-done {
+	background: linear-gradient(to left, #93a451, #93a451);
+	border-radius: 20px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100%;
+	width: 0;
+	opacity: 0;
+	transition: 1s ease 0.3s;
+}
+
+.btn {
+    height: 35px;
+    width: 140px;
+    background: radial-gradient(#f3db67 35%, #c5ad4e);
+    border-radius: 7px;
+    border: solid 3px black;
+}
