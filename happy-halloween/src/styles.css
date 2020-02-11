@@ -157,4 +157,14 @@ body, html {
     position: relative;
     left: 75%;
     bottom: 30px;
+    animation: btn-loading 1s;
+}
+
+@keyframes btn-loading {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
 }
