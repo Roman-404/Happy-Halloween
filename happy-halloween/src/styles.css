@@ -124,6 +124,16 @@ body, html {
 	transition: 1s ease 0.3s;
 }
 
+.font-title {
+    display: inline-block;
+}
+
+.font-subtitle {
+    margin-top: -0.5em;
+    font-size: 15px;
+    margin-right: 1em;
+}
+
 .btn {
     height: 35px;
     width: 140px;
