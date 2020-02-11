@@ -25,7 +25,7 @@ export default class Task extends Component {
 
     componentDidMount() {
         this.setState({
-            task:  this.createTask(this.props.task)
+            task: this.createTask(this.props.task)
         });
     };
     

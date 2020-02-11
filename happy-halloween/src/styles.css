@@ -75,11 +75,12 @@ body, html {
     position: absolute;
     margin: auto;
     left: 0; right: 0;
-    margin-top: 7%;
+    margin-top: 7.8%;
 }
 
 .task {
-    margin-top: 10%;
+    margin-top: 9%;
+    height: 70px;
 }
 
 .font {
@@ -134,7 +135,7 @@ body, html {
 	height: 100%;
 	width: 0;
 	opacity: 0;
-	transition: 1s ease 0.3s;
+	transition: 0.5s ease 0.3s;
 }
 
 .font-title {
