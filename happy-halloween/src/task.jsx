@@ -41,6 +41,7 @@ export default class Task extends Component {
         const {task} = this.state;
         return (
             <div className='task'>
+                <img src={task.img} alt='' className='img'/>
                 <div className='font'>
                    {task.description}
                 </div>

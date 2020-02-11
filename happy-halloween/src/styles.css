@@ -71,19 +71,31 @@ body, html {
 }
 
 .tasks {
+    width: var(--width);
     position: absolute;
+    margin: auto;
     left: 0; right: 0;
-    margin-top: 10%;
+    margin-top: 7%;
 }
 
 .task {
-    margin-top: 5%;
+    margin-top: 10%;
 }
 
 .font {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 20px;
     font-weight: bold;
+    width: 330px;
+    text-align: left;
+    padding-left: 25%;
+    padding-top: 3%;
+}
+
+.img {
+    float: left;
+    padding-left: 10%;
+    transform: rotate(10deg);
 }
   
 @media (prefers-reduced-motion: no-preference) {
@@ -106,9 +118,10 @@ body, html {
 	border-radius: 20px;
 	position: absolute;
     margin: 15px 0;
-    margin-left: 40%;
+    margin-left: 25%;
+    margin-top: 30px;
 	height: 20px;
-    width: 400px;
+    width: 380px;
     border: solid 3px #ebecbc;
 }
 
@@ -135,9 +148,12 @@ body, html {
 }
 
 .btn {
-    height: 35px;
+    height: 40px;
     width: 140px;
     background: radial-gradient(#f3db67 35%, #c5ad4e);
     border-radius: 7px;
     border: solid 3px black;
+    position: relative;
+    left: 75%;
+    bottom: 30px;
 }
