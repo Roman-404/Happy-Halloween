@@ -21,7 +21,7 @@ const Progress = ({progress, handleSetShirt}) => {
 		return () => {
 			clearTimeout(set)
 		}
-	},[done, progress]);
+	},[progress]);
 	
 	return (
 		<div className="progress">
