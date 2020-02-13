@@ -4,19 +4,24 @@ const Progress = ({progress, handleSetShirt}) => {
 	const [style, setStyle] = React.useState({});
 	const [done, setProgress] = React.useState(false);
 	
-	setTimeout(() => {
-		const newStyle = {
-			opacity: 1,
-			width: `${progress}%`
+	React.useEffect(() => {
+		const set = setTimeout(() => {
+			const newStyle = {
+				opacity: 1,
+				width: `${progress}%`
+			};
+	
+			setTimeout(() => {
+				if (progress === 100) {
+				setProgress(true)};
+			}, 1000);
+			
+			setStyle(newStyle);
+		}, 500);
+		return () => {
+			clearTimeout(set)
 		}
-		
-		setStyle(newStyle);
-	}, 1000);
-
-	setTimeout(() => {
-		if (progress === 100) {
-		setProgress(true)};
-	}, 2000);
+	},[done, progress]);
 	
 	return (
 		<div className="progress">

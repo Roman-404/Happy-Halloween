@@ -15,12 +15,16 @@ export default class PageInfo extends Component {
 
     componentDidMount() {
         this.loadTasks()
-        setInterval(() => {
+        this.timer = setInterval(() => {
             this.setState({
                 timer: this.getTimer(this.state.date_to)
             })
         }, 1000);
-    }
+    };
+
+    componentWillUnmount() {
+        clearInterval(this.timer)
+    };
 
     loadTasks = () => {
         axios.get('http://sol-tst.herokuapp.com/api/v1/tasks/')
@@ -36,14 +40,14 @@ export default class PageInfo extends Component {
         })
         .catch(error => {
             console.log(error)
-        })
-    }
+        });
+    };
 
     getTimer = date => {
         const diff = moment(date).diff(moment().format())
         const timer = moment(diff).format('DDD:hh:mm:ss').split(':')
     return timer
-    }
+    };
 
 
     render() {
@@ -62,6 +66,6 @@ export default class PageInfo extends Component {
                         />}
                   </div>
             </div>
-        )
-    }
-}
+        );
+    };
+};
