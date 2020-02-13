@@ -45,7 +45,7 @@ export default class Task extends Component {
                 <div className='font'>
                    {task.description}
                 </div>
-                <Progress done={task.progress}
+                <Progress progress={task.progress}
                           handleSetShirt={this.props.handleSetShirt}
                     />
             </div>
