@@ -2,7 +2,7 @@ import React from 'react';
 
 const Progress = ({done, handleSetShirt}) => {
 	const [style, setStyle] = React.useState({});
-	const [progress=false, setProgress] = React.useState({});
+	const [progress, setProgress] = React.useState(false);
 	
 	setTimeout(() => {
 		const newStyle = {
@@ -15,17 +15,13 @@ const Progress = ({done, handleSetShirt}) => {
 
 	setTimeout(() => {
 		if (done === 100) {
-		const newProgress = {
-			done: true
-		}
-		
-		setProgress(newProgress)};
+		setProgress(true)};
 	}, 2000);
 	
 	return (
 		<div className="progress">
 			<div className="progress-done" style={style}/>
-			   {progress.done ? 
+			   {progress ? 
                   <button className='btn' onClick={handleSetShirt}>Поставить рубашку</button> : null
                }
 		</div>
